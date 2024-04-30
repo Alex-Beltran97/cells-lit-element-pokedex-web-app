@@ -1,0 +1,34 @@
+{
+  "es-ES": {
+    "login-page.button": "Iniciar sesion",
+    "login-page.user-input": "Usuario",
+    "login-page.password-input": "Contraseña",
+    "dashboard-page.header": "Bienvenido, scaffoldLit",
+    "dashboard-page.logout-modal.header": "Cerrar sesión",
+    "dashboard-page.logout-modal.button": "Continuar",
+    "dashboard-page.logout-modal.slot": "¿Quieres cerrar sesión?",
+    "movement-detail.concept": "Concepto",
+    "movement-detail.date": "Fecha",
+    "movement-detail.description": "Descripción",
+    "movement-detail.category": "Categoría",
+    "movement-detail.amount": "Importe",
+    "movement-detail.currentBalance": "Saldo Actual",
+    "movement-detail.badges": "Etiquetas"
+  },
+  "en-US": {
+    "login-page.button": "Sign in",
+    "login-page.user-input": "User",
+    "login-page.password-input": "Password",
+    "dashboard-page.header": "Wellcome, scaffoldLit",
+    "dashboard-page.logout-modal.header": "Sign out",
+    "dashboard-page.logout-modal.button": "Continue",
+    "dashboard-page.logout-modal.slot": "Do you want to close your session?",
+    "movement-detail.concept": "Concept",
+    "movement-detail.date": "Fecha",
+    "movement-detail.description": "Description",
+    "movement-detail.category": "Category",
+    "movement-detail.amount": "Amount",
+    "movement-detail.currentBalance": "Current Balance",
+    "movement-detail.badges": "Badges"
+  }
+}
