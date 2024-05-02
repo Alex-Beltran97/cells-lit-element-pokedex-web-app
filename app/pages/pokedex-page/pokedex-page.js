@@ -25,11 +25,11 @@ class PokedexPage extends BbvaCoreIntlMixin(CellsPage) {
   constructor() {
     super();
     this.pokemons = [];
-  };
+  }
 
   async firstUpdated() {
     this.pokeApiDm = this.shadowRoot.querySelector('#pokeapi-data');
-    this.pokemons = await this.pokeApiDm.getPokemons();    
+    this.pokemons = await this.pokeApiDm.getPokemons();
   }
 
   render() {
@@ -61,12 +61,14 @@ class PokedexPage extends BbvaCoreIntlMixin(CellsPage) {
     await this._handleLoadPokemons('previous');
   }
 
-  async _handleNextPage() {        
+  async _handleNextPage() {
     await this._handleLoadPokemons('next');
   }
 
-  async _handleLoadPokemons(key = "") {
-    if (this.pokeApiDm[key] === null) return;
+  async _handleLoadPokemons(key = '') {
+    if (this.pokeApiDm[key] === null) {
+      return;
+    }
     this.pokemons = [];
     this.pokeApiDm.url = this.pokeApiDm[key];
     this.pokemons = await this.pokeApiDm.getPokemons();

@@ -1,12 +1,12 @@
-import { CellsPage } from "@cells/cells-page";
-import { BbvaCoreIntlMixin } from "@bbva-web-components/bbva-core-intl-mixin";
-import { html } from "lit-element";
+import { CellsPage } from '@cells/cells-page';
+import { BbvaCoreIntlMixin as bbvaCoreIntlMixin } from '@bbva-web-components/bbva-core-intl-mixin';
+import { html } from 'lit-element';
 
-import css from "./co-pokemon-card-styles";
+import css from './co-pokemon-card-styles';
 
-export class CoPokemonCard extends BbvaCoreIntlMixin(CellsPage) {
+export class CoPokemonCard extends bbvaCoreIntlMixin(CellsPage) {
   static get is() {
-    return "co-pokemon-card";
+    return 'co-pokemon-card';
   }
 
   static get properties() {
@@ -35,17 +35,17 @@ export class CoPokemonCard extends BbvaCoreIntlMixin(CellsPage) {
   }
 
   _handleAssignData() {
-    const { evolutionNumber, id, image, name, type } = JSON.parse(this.pokemon)[this.index];
+    const { evolutionNumber, id, image, name: pokemonName, type } = JSON.parse(this.pokemon)[this.index];
     this.id = id;
-    this.name = name;
+    this.name = pokemonName;
     this.image = image;
     this.type = type;
     this.evolutions = evolutionNumber;
   }
 
   render() {
-    if (this.id)
-    return html`
+    if (this.id) {
+      return html`
       <div class="card-pokemon">
         <div class="card-title">
           <button 
@@ -79,19 +79,20 @@ export class CoPokemonCard extends BbvaCoreIntlMixin(CellsPage) {
         </div>            
       </div>
     `;
+    }
   }
 
   static get styles() {
-    return [css];
+    return [ css ];
   }
 
-  _handleChangeEvolution(next = true) {  
+  _handleChangeEvolution(next = true) {
     if (next && (this.index === 0 || this.index === 1) && (this.index + 1) !== this.evolutions) {
-      this.index++;    
+      this.index++;
     } else if (!next && (this.index === 2 || this.index === 1)) {
-      this.index--;    
-    };
-  };
+      this.index--;
+    }
+  }
 }
 
 window.customElements.define(CoPokemonCard.is, CoPokemonCard);
