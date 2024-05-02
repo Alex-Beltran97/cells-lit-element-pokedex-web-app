@@ -7,8 +7,8 @@ import '@bbva-web-components/bbva-header-main';
 
 import css from './pokedex-page-styles';
 
-import '../../elements/bgadp-pokeapi-dm/bgadp-pokeapi-dm';
-import '../../elements/co-pokemon-card/co-pokemon-card';
+import '../../../node_modules/@prueba-tech/bgadp-pokeapi-dm'
+import '../../elements/co-pokemon-card/co-pokemon-card-styles/co-pokemon-card';
 
 /* eslint-disable new-cap */
 class PokedexPage extends BbvaCoreIntlMixin(CellsPage) {
