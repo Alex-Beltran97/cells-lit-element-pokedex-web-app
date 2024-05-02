@@ -7,8 +7,8 @@ import '@bbva-web-components/bbva-header-main';
 
 import css from './pokedex-page-styles';
 
-import '../../../node_modules/@prueba-tech/bgadp-pokeapi-dm'
-import '../../elements/co-pokemon-card/co-pokemon-card-styles/co-pokemon-card';
+import '@prueba-tech/bgadp-pokeapi-dm';
+import '@prueba-tech/ui-pokemon-card/ui-pokemon-card.js';
 
 /* eslint-disable new-cap */
 class PokedexPage extends BbvaCoreIntlMixin(CellsPage) {
@@ -48,10 +48,12 @@ class PokedexPage extends BbvaCoreIntlMixin(CellsPage) {
             <strong>Cargando...</strong> 
           ` : ''}          
           ${ this.pokemons.map(pokemon => html `
-            <co-pokemon-card              
+            <ui-pokemon-card
+              leftArrowIcon="./resources/images/icons/arrow-left.png"
+              rightArrowIcon="./resources/images/icons/arrow-right.png"
               pokemon="${ JSON.stringify(pokemon) }"
-            ></co-pokemon-card>
-          `)}          
+            ></ui-pokemon-card>
+          `)}
         </div>
         <bgadp-pokeapi-dm id="pokeapi-data"></bgadp-pokeapi-dm>
     </cells-template-paper-drawer-panel>`;

@@ -24,6 +24,7 @@
     "@cells/cells-page": "~1.3.1",
     "@open-wc/lit-helpers": "~0.3.11",
     "@prueba-tech/bgadp-pokeapi-dm": "git+ssh://git@globaldevtools.bbva.com:7999/~pedroalexander.beltran.contractor.cidentity/bgadp-pokeapi-dm.git#master",
+    "@prueba-tech/ui-pokemon-card": "git+ssh://git@globaldevtools.bbva.com:7999/~pedroalexander.beltran.contractor.cidentity/ui-pokemon-card.git#master",
     "@webcomponents/webcomponentsjs": "~2.4.4",
     "cells-app-template": "~6.0.0"
   }
